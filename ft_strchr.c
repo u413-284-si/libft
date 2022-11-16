@@ -6,7 +6,7 @@
 /*   By: sqiu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 14:15:59 by sqiu              #+#    #+#             */
-/*   Updated: 2022/10/07 10:42:10 by sqiu             ###   ########.fr       */
+/*   Updated: 2022/11/16 15:08:44 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
+	if (c > 255)
+		c -= 256 * (c / 256);
 	i = 0;
 	while (s[i])
 	{
@@ -39,14 +41,14 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-// int	main(void)
-// {
-// 	char	*s;
-// 	char	c;
+/* int	main(void)
+{
+	char	*s;
+	//char	c;
 
-// 	s = "Sambadijaneiro";
-// 	c = 'i';
-// 	printf("%s\n", strchr(s, c));
-// 	printf("%s\n", ft_strchr(s, c));
-// 	return (0);
-// }
+	s = "Sambadijaneiro";
+	//c = 1024;
+	printf("%s\n", strchr(s, 1024));
+	printf("%s\n", ft_strchr(s, 1024));
+	return (0);
+} */

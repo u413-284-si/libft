@@ -6,7 +6,7 @@
 /*   By: sqiu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:25:29 by sqiu              #+#    #+#             */
-/*   Updated: 2022/10/08 15:32:18 by sqiu             ###   ########.fr       */
+/*   Updated: 2022/11/16 21:55:08 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ followed by a newline.
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s)
+	if (!s || fd < 0)
 		return ;
 	while (*s)
 		write (fd, s++, 1);
