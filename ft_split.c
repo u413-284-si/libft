@@ -6,7 +6,7 @@
 /*   By: sqiu <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:08:57 by sqiu              #+#    #+#             */
-/*   Updated: 2022/10/08 20:19:51 by sqiu             ###   ########.fr       */
+/*   Updated: 2022/12/15 10:55:53 by sqiu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,21 +110,21 @@ static char	*get_str(char const *s, char c)
 	return (str);
 }
 
-// int	main(void)
-// {
-// 	char	s[] = "   ";
-// 	char	c = ' ';
-// 	char	**arr;
-// 	int		i;
+int	main(void)
+{
+	char	s[] = " asd ssss dwe  ";
+	char	c = ' ';
+	char	**arr;
+	int		i;
 
-// 	arr = ft_split(s, c);
-// 	i = 0;
-// 	while (arr[i])
-// 	{
-// 		printf("%s\n", arr[i]);
-// 		free(arr[i]);
-// 		i++;
-// 	}
-// 	free(arr);
-// 	return (0);
-// }
+	arr = ft_split(s, c);
+	i = 0;
+	while (arr[i])
+	{
+		printf("%s\n", arr[i]);
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	return (0);
+}
